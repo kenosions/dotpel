@@ -1,0 +1,110 @@
+* {
+    -gtkscrollbar-has-backward-stepper: false;
+    -gtkscrollbar-has-forward-stepper: false;
+    -gtkscrolledwindow-overlay-scrolling: false;
+    -gtkscrolledwindow-scar-size: 0;
+}
+
+window {
+    border: 2px solid #4997d0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 12px;
+    font-family: "JetBrains Mono NF";
+    background-clip: padding-box;
+}
+
+#outer-box {
+    margin: 0px;
+}
+
+#input {
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+    color: #f8f8f2;
+    border-radius: 8px;
+    padding: 6px 10px;
+}
+
+#input:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background-color: rgba(49, 50, 68, 0.8);
+}
+
+#inner-box {
+    margin: 0px;
+    padding: 0px;
+}
+
+#entry {
+    padding: 4px 12px;
+    color: #f8f8f2;
+    margin: 0px;
+}
+
+#entry box {
+    margin: 0%;
+    padding: 0px;
+}
+
+#entry image {
+    -gtk-icon-transform: scale(0.7);
+    min-width: 24px;
+    max-width: 24px;
+    min-height: 24px;
+    max-height: 24px;
+    margin-right: 2px;
+    margin-left: 0px;
+}
+
+/* 1. Default selected = transparan biar ga double highlight */
+#entry:selected {
+    background-color: transparent;
+    color: #50fa7b;
+    outline: transparent;
+    font-weight: bold;
+}
+
+#entry:selected * {
+    color: #50fa7b;
+    font-weight: bold;
+}
+
+/* 2. Kalau list yang focus, baru kasih warna */
+#inner-box:focus #entry:selected {
+    background-color: rgba(137, 180, 250, 0.15);
+    color: #f8f8f2;
+}
+
+#inner-box:focus #entry:selected * {
+    color: #f8f8f2;
+    font-weight: bold;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+scrollbar,
+scrollbar slider {
+    all: unset;
+    opacity: 0;
+    min-width: 0px;
+    min-height: 0px;
+    margin: -100px;
+    background: none;
+    border: none;
+}
+
+overshoot,
+undershoot {
+    background: none;
+}
+
+scrolledwindow {
+    margin: 0px;
+    padding: 0px;
+}
